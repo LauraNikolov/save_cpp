@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-TARGET = harl
+TARGET = HarlFilter
 # Compilateur
 CXX = g++
 
@@ -10,7 +10,7 @@ CXXFLAGS = -Wall -Wextra -std=c++11
 SRCS = main.cpp \
 Harl.cpp \
 
-# Fichiers objets
+# Fichiers objets 
 OBJS = $(SRCS:.cpp=.o)
 
 # Règle par défaut
