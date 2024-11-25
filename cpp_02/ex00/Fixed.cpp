@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:25:57 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/19 14:11:23 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:02:20 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ Intérêt :
     Définit comment copier un objet, utile pour passer des objets par valeur ou les insérer dans des conteneurs.
     Nécessaire lorsque la classe utilise des ressources dynamiques (comme des pointeurs) pour éviter des copies superficielles (shallow copy).
 */
-Fixed::Fixed(const Fixed&) {
+Fixed::Fixed(const Fixed& other) {
     std::cout << "Copy constructor called" << std::endl;
+    *this = other;
 }
 
 /* Opérateur d’affectation (operator=)
@@ -56,8 +57,8 @@ Intérêt :
 */
 
 Fixed& Fixed::operator=(Fixed const &other) {
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) {
-        std::cout << "Copy assignment operator called" << std::endl;
         this->Value = other.getRawBits();
     }
     return *this;

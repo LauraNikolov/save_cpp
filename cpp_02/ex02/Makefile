@@ -5,7 +5,7 @@ TARGET = Fixed
 CXX = g++
 
 # Options de compilation
-CXXFLAGS = -Wall -Wextra -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++98
 
 # Fichiers source
 SRCS = main.cpp \

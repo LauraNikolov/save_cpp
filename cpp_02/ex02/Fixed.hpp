@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:17:52 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/19 16:42:06 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:26:40 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,20 @@ class Fixed {
         Fixed(float const raw);
         //Operateur d'affectation
         Fixed& operator=(Fixed const &other);
-        ~Fixed(); 
+        bool operator>(Fixed const &other) const;
+        bool operator<(Fixed const &other) const;
+        bool operator>=(Fixed const &other);
+        bool operator<=(Fixed const &other);
+        bool operator==(Fixed const &other);
+        bool operator!=(Fixed const &other);
+        Fixed operator+(Fixed const &other);
+        Fixed operator-(Fixed const &other);
+        Fixed operator*(Fixed const &other);
+        Fixed operator/(Fixed const &other);
+        Fixed operator++(void);
+        Fixed operator--(void);
+        Fixed operator++(int);
+        Fixed operator--(int);
         // Retourne la valeur brute du nombre en virgule fixe
         int getRawBits() const;
         // Initialise la valeur brute du nombre en virgule fixe
@@ -37,6 +50,10 @@ class Fixed {
         int toInt(void) const ;
         //convertit la velur en virgule fixe en virgule flottante
         float toFloat(void) const ;
+        static Fixed &min (Fixed &first, Fixed &second);
+		const static Fixed &min ( const Fixed &first, const Fixed &second);
+		static Fixed &max ( Fixed &first, Fixed &second);
+		const static Fixed &max ( const Fixed &first, const Fixed &second);
     
     private:
         int _value; //valeur fixe
