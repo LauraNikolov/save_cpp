@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-TARGET = Fixed
+TARGET = ClapTrap
 
 # Compilateur
 CXX = g++

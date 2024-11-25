@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:07:56 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/25 18:56:29 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:11:52 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@
 class ClapTrap
 {
   public:
-	ClapTrap(std::string name);                                   // par defaut
+    ~ClapTrap(void); //Destructeur
+    ClapTrap(void); //par defaut
+	ClapTrap(std::string name);                                  
 	ClapTrap(const ClapTrap &other);              // de copie
 	ClapTrap &operator=(const ClapTrap &other); // operateur d'affectation
     //setter
-	int getHitPoint(void);
-    int getEnergyPoint(void);
-    int getAttackDamage(void);
-    std::string getName(void);
+	int getHitPoint(void) const;
+    int getEnergyPoint(void) const;
+    int getAttackDamage(void) const;
+    std::string getName(void) const;
     //getter
     void setHitPoint(int nbr);
     void setEnergyPoint(int nbr);
