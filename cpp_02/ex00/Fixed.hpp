@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:17:52 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/18 18:10:33 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:14:16 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class Fixed {
     
     public:
-        //constructuer de copie
         Fixed(); 
         //constructeur de recopie
         Fixed(const Fixed &); 

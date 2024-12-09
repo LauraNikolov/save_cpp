@@ -6,13 +6,11 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:25:57 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/25 16:02:20 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 11:05:09 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-
 
 Fixed::~Fixed(void) {
     std::cout << "Destructor called" << std::endl; 
@@ -69,7 +67,6 @@ int Fixed::getRawBits(void) const {
     std::cout << "getRawBits member function called" << std::endl;
     return(this->Value);
 }
-
 
 void Fixed::setRawBits(int const raw) {
     this->Value = raw;
