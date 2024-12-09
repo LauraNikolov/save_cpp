@@ -6,30 +6,30 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:30:48 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/25 19:14:01 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 18:02:45 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::~ClapTrap(void) {
-	std::cout << "Destructor is called for " << this->_name << " Clap Trap" << std::endl;
+	std::cout << "Clap Trap destructor is called for " << this->_name << " Clap Trap" << std::endl;
 }
 
-ClapTrap::ClapTrap(void) : _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0) {
-    std::cout << "Default constructor is called" << std::endl;
+ClapTrap::ClapTrap() {
+	std::cout << "ClapTrap default constructore is called" << std::endl;
 }
 
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10),
                                        _energyPoint(10), _attackDamage(0)
 {
-    std::cout << "Name constructor is called for " << name << std::endl;
+    std::cout << "Clap Trap name constructor is called for " << name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	std::cout << "Copy constructor is called from " << other.getName() << std::endl;
+	std::cout << "Clap Trap copy constructor is called from " << other.getName() << std::endl;
 	*this = other;
 }
 

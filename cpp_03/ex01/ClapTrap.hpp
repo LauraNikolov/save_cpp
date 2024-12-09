@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:07:56 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/26 19:13:52 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 14:35:41 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLAPTRAP_HPP
 
 #include <iostream>
+// #include "ScavTrap.hpp"
 
 class ClapTrap
 {
@@ -21,7 +22,7 @@ class ClapTrap
     ~ClapTrap(void); //Destructeur
     ClapTrap(void); //par defaut
 	ClapTrap(std::string name);                                  
-	ClapTrap(const ClapTrap &other);              // de copie
+	ClapTrap(const ClapTrap &other);   //de recopie           // de copie
 	ClapTrap &operator=(const ClapTrap &other); // operateur d'affectation
     //setter
 	int getHitPoint(void) const;
@@ -33,7 +34,7 @@ class ClapTrap
     void setEnergyPoint(int nbr);
     void setAttackDamage(int nbr);
     void setName(std::string new_name);
-    virtual void attack(const std::string &target);
+    void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 

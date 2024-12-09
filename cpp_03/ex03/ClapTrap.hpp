@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:07:56 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/11/27 17:26:26 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 17:32:22 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLAPTRAP_HPP
 
 #include <iostream>
+// #include "ScavTrap.hpp"
 
 class ClapTrap
 {
@@ -33,11 +34,11 @@ class ClapTrap
     void setEnergyPoint(int nbr);
     void setAttackDamage(int nbr);
     void setName(std::string new_name);
-    void attack(const std::string &target);
+    virtual void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-    private:
+    protected:
         std::string _name;
         int _hitPoint;
         int _energyPoint;

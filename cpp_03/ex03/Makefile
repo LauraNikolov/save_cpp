@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-TARGET = ScavTrap
+TARGET = DiamondTrap
 
 # Compilateur
 CXX = g++
@@ -11,6 +11,8 @@ CXXFLAGS = -Wall -Wextra -std=c++98
 SRCS = main.cpp \
 ClapTrap.cpp \
 ScavTrap.cpp \
+FragTrap.cpp \
+DiamondTrap.cpp \
 
 # Fichiers objets
 OBJS = $(SRCS:.cpp=.o)

@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:30:48 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/09 18:03:45 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 18:02:29 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::~ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap() {
-	std::cout << "ClapTrap default constructor is called" << std::endl;
+	std::cout << "ClapTrap default constructore is called" << std::endl;
 }
 
 

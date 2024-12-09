@@ -6,25 +6,27 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:15:14 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/09 18:21:59 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/09 18:19:02 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
 
+
 ScavTrap::ScavTrap() : ClapTrap() {
 	std::cout << "ScavTrap default constructor called" << std::endl;
-	this->_hitPoint = 100;
     this->_energyPoint = 50;
-    this->_attackDamage = 20;
 }
+
+
 
 ScavTrap::ScavTrap(ScavTrap const &other) : ClapTrap(other.getName()) {
 	if(this != &other) {
 		*this = other;
 	}
 }
+
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     std::cout << "ScavTrap name constructor is called for " << _name << std::endl;
@@ -33,7 +35,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     this->_attackDamage = 20;
 	this->_name = name;
 }
-
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
 	if(this != &other) {
