@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 15:46:21 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/11 13:04:07 by lnicolof         ###   ########.fr       */
+/*   Created: 2024/12/11 17:38:52 by lnicolof          #+#    #+#             */
+/*   Updated: 2024/12/11 17:41:28 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-    #define DOG_HPP
+#include "AMateria.hpp"
+#include "Cure.hpp"
 
-#include "Animal.hpp"
-#include "Brain.hpp"
 
-class Dog : public Animal {
-    public:
-    Dog();
-    Dog(const Dog &other);
-    Dog &operator=(const Dog &other);
-    ~Dog();
-    void makeSound(void) const;
+Cure::Cure(void) {
+    type = "cure";
+}
 
-    private:
-    Brain *ideas;
-};
+Cure::Cure(const Cure &other) {
+    *this = other;
+}
 
-#endif
+Cure &Cure::operator=(const Cure &other) {
+    if(this != &other) {
+        type = other.type;
+    }
+    return(*this);
+}
+

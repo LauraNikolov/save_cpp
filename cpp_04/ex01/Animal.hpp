@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:45:12 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/10 18:49:33 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:36:09 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ class Animal {
         Animal &operator=(const Animal &other);
         std::string getType(void) const;
         void setType(std::string new_type);
-        ~Animal();
-        virtual void makeSound(void) const;
+        virtual ~Animal();
+        virtual void makeSound() const;
     protected:
         std::string _type;
-        Brain *ideas;
 } ;
 
 #endif

@@ -19,7 +19,7 @@ int main()
         delete Tab[i]; }
     // const Animal* meta = new Animal();
     // meta->makeSound();
-    Animal animal;
-    animal.makeSound();
+    // Animal animal;
+    // animal.getType();
     return 0;
 }

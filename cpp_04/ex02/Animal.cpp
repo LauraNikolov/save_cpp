@@ -1,41 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 16:31:58 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/11 15:14:34 by lnicolof         ###   ########.fr       */
+/*   Created: 2024/12/10 15:48:54 by lnicolof          #+#    #+#             */
+/*   Updated: 2024/12/11 16:17:42 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp" 
+#include "Animal.hpp"
 
-Dog::Dog(void) : Animal() {
-    std::cout  << "Dog default constructor is called" << std::endl;
-    this->ideas = new Brain();
-    this->_type = "Dog";
+Animal::Animal(void) {
+    std::cout << "Animal default constructor called" << std::endl;
 }
 
-
-Dog::Dog(const Dog &other) : Animal() {
+Animal::Animal(const Animal &other) {
     *this = other;
+    
 }
 
-Dog &Dog::operator=(const Dog &other) {
+Animal &Animal::operator=(const Animal &other) {
     if(this != &other) {
-        this->ideas = other.ideas;
         this->_type = other.getType();
-    } 
+    }
+
     return *this;
 }
 
-Dog::~Dog(void) {
-    delete ideas;
-    std::cout << "Dog default destructor is called" << std::endl;
+Animal::~Animal(void) {
+    std::cout << "Animal default destructor called" << std::endl;
 }
 
-void Dog::makeSound(void) const {
-    std::cout << "WOUAF WOUAF" << std::endl;
+
+void Animal::makeSound(void) const {
+    std::cout << "Animaaaaaaaal" << std::endl;
+}
+
+void Animal::setType(std::string new_type) {
+    _type = new_type;
+}
+
+std::string Animal::getType(void) const {
+    return _type;
 }

@@ -6,14 +6,13 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:48:54 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/10 19:02:45 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:10:54 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void) {
-    ideas = NULL;
     std::cout << "Animal default constructor called" << std::endl;
 }
 
@@ -31,7 +30,7 @@ Animal &Animal::operator=(const Animal &other) {
 }
 
 Animal::~Animal(void) {
-    std::cout << "Animal default constructor called" << std::endl;
+    std::cout << "Animal default destructor called" << std::endl;
 }
 
 
