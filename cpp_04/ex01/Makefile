@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-TARGET = Fixed
+TARGET = brain
 
 # Compilateur
 CXX = g++

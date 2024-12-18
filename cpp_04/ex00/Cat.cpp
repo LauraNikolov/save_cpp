@@ -18,11 +18,13 @@ Cat::Cat() : Animal() {
 }
 
 Cat::Cat(const Cat &other) : Animal() {
+    std::cout << "Cat copy constructor called" << std::endl;
     *this = other;
 }
 
 Cat &Cat::operator=(const Cat &other) {
     if(this != &other) {
+        Animal::operator=(other);
         _type = other.getType();
     }
 

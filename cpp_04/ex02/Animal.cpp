@@ -6,7 +6,7 @@
 /*   By: lnicolof <lnicolof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:48:54 by lnicolof          #+#    #+#             */
-/*   Updated: 2024/12/11 16:17:42 by lnicolof         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:10:54 by lnicolof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Animal::Animal(void) {
 }
 
 Animal::Animal(const Animal &other) {
+    std::cout << "Animal copy constructor called" << std::endl;
     *this = other;
     
 }

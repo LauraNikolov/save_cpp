@@ -18,6 +18,7 @@ WrongAnimal::WrongAnimal(void) {
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other) {
+    std::cout << "WrongAnimal copy constructor called" << std::endl;
     *this = other;
     
 }
@@ -45,4 +46,4 @@ void WrongAnimal::setType(std::string new_type) {
 
 std::string WrongAnimal::getType(void) const {
     return _type;
-}
+} 

@@ -12,25 +12,31 @@
 
 #include "AMateria.hpp"
 
-AMateria::AMateria(void) {
+AMateria::AMateria(void)
+{
     std::cout << "Default Amateria constructor called" << std::endl;
 }
 
-AMateria::AMateria(std::string const & type) {
+AMateria::AMateria(std::string const &type)
+{
     this->_type = type;
 }
 
-AMateria &AMateria::operator=(const AMateria &other) {
-    if(this != &other) {
+AMateria &AMateria::operator=(const AMateria &other)
+{
+    if (this != &other)
+    {
         this->_type = other._type;
     }
-    return(*this);
+    return (*this);
 }
 
-std::string const &AMateria::getType() const {
-    return(_type);
+std::string const &AMateria::getType() const
+{
+    return (_type);
 }
 
-void AMateria::use(ICharacter& target) {
+void AMateria::use(ICharacter &target)
+{
     (void)target;
 }

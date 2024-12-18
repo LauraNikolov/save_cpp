@@ -30,7 +30,7 @@ Animal &Animal::operator=(const Animal &other) {
 }
 
 Animal::~Animal(void) {
-    std::cout << "Animal default constructor called" << std::endl;
+    std::cout << "Animal default destructor called" << std::endl;
 }
 
 

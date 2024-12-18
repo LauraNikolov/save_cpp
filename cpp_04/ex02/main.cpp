@@ -2,24 +2,14 @@
 #include "Cat.hpp"
 #include "Animal.hpp"
 
-int main()
-{
-    Animal *Tab[10];
 
+int main() {
+    Animal* animal = new Animal();
 
-    for(int i = 0; i < 10; i++) {
-        if(i < 5)
-            Tab[i] = new Dog();
-        else
-            Tab[i] = new Cat();
-    }
+    // Si vous atteignez cette ligne, cela signifie que la classe n'est pas abstraite
+    std::cout << "Animal instance created, which should not be possible!" << std::endl;
 
-    for (int i = 0; i < 10; i++) {
-        Tab[i]->makeSound();
-        delete Tab[i]; }
-    // const Animal* meta = new Animal();
-    // meta->makeSound();
-    // Animal animal;
-    // animal.getType();
+    delete animal;
+
     return 0;
 }
