@@ -1,17 +1,14 @@
 # Nom de l'exécutable
-TARGET = Materia
+TARGET = convert
 
 # Compilateur
-CXX = c++
+CXX = g++
 
 # Options de compilation
 CXXFLAGS = -Wall -Wextra -std=c++98 -g3
 
 # Fichiers source
-SRCS = AMateria.cpp \
-Character.cpp \
-Cure.cpp \
-Ice.cpp \
+SRCS = ScalarConvert.cpp \
 main.cpp \
 
 # Fichiers objets
